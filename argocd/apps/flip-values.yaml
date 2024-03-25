@@ -4,7 +4,7 @@ namespace: flip
 values: |-
   fullnameOverride: flip-app
   image: 
-    repository: pelfap/flip-ip:app-5
+    repository: pelfap/flip-ip:app-6
   namespace: flip
   containerPort: 3000
   managedidentity:
