@@ -7,7 +7,7 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/daviinaa/argocd-manifests.git
+      repoURL: https://github.com/pelstix/recreate-argocd-manifests.git
       revision: main
       files:
       - path: "argocd/apps/"
@@ -18,13 +18,13 @@ spec:
       project: '{{project}}'
       source:
         chart: flip-ip
-        repoURL: https://daviinaa.github.io/helm-chart/
+        repoURL: https://pelstix.github.io/recreate-helm-chart/
         targetRevision: 0.1.1
         helm:
           values: |-
             {{values}}
       destination:
-        name: gke_double-lore-410115_us-central1-c_new-flip
+        name: aks-agentpool-15731782-vmss000000
         namespace: '{{namespace}}'
       
       syncPolicy:
